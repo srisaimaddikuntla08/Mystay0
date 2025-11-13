@@ -12,13 +12,12 @@ connectDb();
 
 
 
-
 //Middleware
 app.use(express.json());
 app.use(clerkMiddleware());
 app.use(cors());
 
-app.use("api/clerk",clerkWebhooks);
+app.use("/api/clerk",clerkWebhooks);
 
 
 
